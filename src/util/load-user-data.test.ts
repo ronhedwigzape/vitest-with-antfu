@@ -3,18 +3,20 @@ import { loadUserData } from "./load-user-data.ts";
 
 describe('loadUserDetails', () => {
     test('load user data as expected', async () => {
-        const user = await loadUserData('antfu7');
+        const user = await loadUserData('jilengstorf');
 
+        // Automatic update snapshot with npx vitest -u
         expect(user).toMatchInlineSnapshot(`
           {
-            "coolness": 100,
-            "favoriteFood": "sushi",
-            "name": "Anthony",
+            "coolness": -1,
+            "favoriteFood": "pizza",
+            "name": "Jason",
             "projects": [
-              "vitest",
-              "vite",
+              "burgers",
+              "cheese",
             ],
-            "username": "antfu7",
+            "snacks": true,
+            "username": "jilengstorf",
           }
         `)
     })
